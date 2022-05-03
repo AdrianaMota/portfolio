@@ -1,0 +1,64 @@
+$base-color: #FF8585
+$transition: all 0.5s ease-in-out
+
+@mixin transition
+    transition: $transition
+
+@mixin lineStyle
+    @include transition
+    background: $base-color
+    content: ''
+    position: absolute
+
+@mixin horizontal
+    width: 0
+    height: 0.1rem
+
+@mixin vertical
+    height: 0
+    width: 0.1rem
+
+@mixin top
+    top: 0
+    left: 0
+
+@mixin bottom
+    bottom: 0
+    right: 0
+
+.link
+    padding: 1rem
+    position: relative
+    margin: 0
+    @include transition
+    &::before
+        @include lineStyle
+        @include horizontal
+        @include top
+
+    &::after
+        @include lineStyle
+        @include horizontal
+        @include bottom
+
+    &:hover
+        color: $base-color
+        &:hover::before, &:hover::after
+            width: 100%
+
+.box
+    padding: 0
+    position: relative
+    &::before
+        @include lineStyle
+        @include vertical
+        @include top
+
+    &::after
+        @include lineStyle
+        @include vertical
+        @include bottom
+
+    &:hover
+        &::before, &::after
+            height: 100%

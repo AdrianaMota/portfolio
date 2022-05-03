@@ -11,7 +11,7 @@ const defaultTheme = extendTheme({
 		xs: "1rem",
 	},
 	colors: {
-		Pink: {
+		pink: {
 			50: "#FFFFFF",
 			100: "#FFFFFF",
 			200: "#FFFFFF",

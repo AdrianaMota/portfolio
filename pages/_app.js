@@ -1,6 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import defaultTheme from "../utils/theme";
-import "../utils/link.scss";
+import "../utils/link.sass";
 
 import "@fontsource/poppins/300.css";
 import "@fontsource/poppins/400.css";

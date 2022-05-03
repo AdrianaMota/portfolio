@@ -56,7 +56,7 @@ export default function Home() {
 				<Text color="gray.500">
 					You are here! 🎉 <br />
 					<br /> Welcome to my personal website, I’m a
-					<strong> UI Engineer. </strong> Scroll down to check out my projects!
+					<strong> UI Developer. </strong> Scroll down to check out my projects!
 				</Text>
 			</VStack>
 		</Stack>
