@@ -12,12 +12,14 @@
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@fontsource/asap-condensed": "^4.5.0",
     "@fontsource/poppins": "^4.5.0",
     "framer-motion": "^6",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-svg-blob": "^0.3.0",
+    "react-use": "^17.3.2",
     "sass": "^1.51.0"
   },
   "devDependencies": {

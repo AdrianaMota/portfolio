@@ -74,6 +74,7 @@ const defaultTheme = extendTheme({
 	},
 	fonts: {
 		main: "'Poppins', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+		heading: "'Asap Condensed', sans-serif;",
 	},
 	styles: {
 		global: {

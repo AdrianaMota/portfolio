@@ -1,7 +1,16 @@
 import { SvgBlob } from "react-svg-blob";
-import { Stack, Box, Text, VStack, Image, HStack } from "@chakra-ui/react";
+import {
+	Stack,
+	Box,
+	Text,
+	VStack,
+	Image,
+	HStack,
+	Flex,
+} from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
 import Navbar from "../components/navbar/Navbar";
+import Card from "../components/Card";
 
 function generateShapeProps(growth, edges) {
 	return {
@@ -14,6 +23,8 @@ export default function Home() {
 	return (
 		<Stack spacing={0}>
 			<Navbar />
+
+			{/* Blob */}
 			<Box position="absolute" w="600px" top="13rem" zIndex="-1">
 				<SvgBlob
 					variant="solid"
@@ -21,6 +32,8 @@ export default function Home() {
 					shapeProps={generateShapeProps(5, 8)}
 				/>
 			</Box>
+
+			{/* Blob */}
 			<Box position="absolute" w="600px" zIndex="-1">
 				<SvgBlob
 					variant="solid"
@@ -28,6 +41,8 @@ export default function Home() {
 					shapeProps={generateShapeProps(7, 14)}
 				/>
 			</Box>
+
+			{/* Blob */}
 			<Box
 				position="absolute"
 				width="600px"
@@ -41,24 +56,36 @@ export default function Home() {
 					shapeProps={generateShapeProps(4, 8)}
 				/>
 			</Box>
+
+			{/* Background */}
 			<Box
 				position="absolute"
 				w="100vw"
 				h="100vh"
 				zIndex="-1"
-				bg="rgba(255,255,255,0.7)"
+				bg="rgba(255,255,255,0.8)"
 				backdropFilter={"blur(50px)"}
 			></Box>
-			<VStack alignItems={"left"} p="10rem 0 0 10rem" w="75rem">
-				<Text fontSize={"xxxl"} fontWeight="bold">
-					Yay!!
-				</Text>
-				<Text color="gray.500">
-					You are here! 🎉 <br />
-					<br /> Welcome to my personal website, I’m a
-					<strong> UI Developer. </strong> Scroll down to check out my projects!
-				</Text>
-			</VStack>
+
+			<Flex direction="column" px="10rem" pt="5rem">
+				<Stack direction="row" justifyContent="space-between">
+					<VStack alignItems={"left"} w="75rem">
+						<Text fontSize={"xxxl"}>Yayy!</Text>
+						<Text color="gray.500" lineHeight={1.8}>
+							You're here 🎉 <br />
+							I'm Adriana Mota a UI Developer
+						</Text>
+					</VStack>
+
+					<Box pr="0">
+						<Image src={`Bunny.gif?${Math.random()}`} width="15rem" />
+					</Box>
+				</Stack>
+
+				<Box mt="8">
+					<Card />
+				</Box>
+			</Flex>
 		</Stack>
 	);
 }
