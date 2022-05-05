@@ -20,8 +20,7 @@
     "react-dom": "18.0.0",
     "react-svg-blob": "^0.3.0",
     "react-use": "^17.3.2",
-    "sass": "^1.51.0",
-    "swiper": "^8.1.4"
+    "sass": "^1.51.0"
   },
   "devDependencies": {
     "eslint": "8.14.0",
