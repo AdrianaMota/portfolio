@@ -16,7 +16,7 @@ const Card = () => {
 					Design & Dev
 				</Box>
 			</Box>
-			<Text
+			{/* <Text
 				fontFamily={"heading"}
 				fontSize="l"
 				fontWeight={"bold"}
@@ -29,7 +29,7 @@ const Card = () => {
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in
 				nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta
 				turpis. Nam sit amet commodo metus.
-			</Text>
+			</Text> */}
 		</Stack>
 	);
 };
