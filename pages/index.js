@@ -29,7 +29,7 @@ function generateShapeProps(growth, edges) {
 
 export default function Home() {
 	return (
-		<Stack spacing={0}>
+		<Stack spacing={0} px="10rem">
 			<Navbar />
 
 			{/* Blob */}
@@ -68,14 +68,14 @@ export default function Home() {
 			{/* Background */}
 			<Box
 				position="absolute"
-				w="100vw"
-				h="100vh"
+				w="100%"
+				h="100%"
 				zIndex="-1"
 				bg="rgba(255,255,255,0.8)"
 				backdropFilter={"blur(50px)"}
 			></Box>
 
-			<Flex direction="column" px="10rem" pt="5rem">
+			<Flex direction="column" pt="5rem">
 				<Stack direction="row" justifyContent="space-between">
 					<VStack alignItems={"left"} w="75rem">
 						<Text fontSize={"xxxl"}>Yayy!</Text>
@@ -89,10 +89,6 @@ export default function Home() {
 						<Image src={`Bunny.gif?${Math.random()}`} width="15rem" />
 					</Box>
 				</Stack>
-
-				<Box mt="8">
-					<Card />
-				</Box>
 			</Flex>
 			<Box>
 				<Swiper
@@ -107,36 +103,18 @@ export default function Home() {
 						modifier: 1,
 						slideShadows: true,
 					}}
+					loop
 					pagination={true}
 					modules={[EffectCoverflow, Pagination]}
-					className="mySwiper"
 				>
 					<SwiperSlide>
-						<img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+						{({ isActive }) => <Card isActive={isActive} />}
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+						{({ isActive }) => <Card isActive={isActive} />}
 					</SwiperSlide>
 					<SwiperSlide>
-						<img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-					</SwiperSlide>
-					<SwiperSlide>
-						<img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-					</SwiperSlide>
-					<SwiperSlide>
-						<img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-					</SwiperSlide>
-					<SwiperSlide>
-						<img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-					</SwiperSlide>
-					<SwiperSlide>
-						<img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-					</SwiperSlide>
-					<SwiperSlide>
-						<img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-					</SwiperSlide>
-					<SwiperSlide>
-						<img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+						{({ isActive }) => <Card isActive={isActive} />}
 					</SwiperSlide>
 				</Swiper>
 			</Box>

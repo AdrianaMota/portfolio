@@ -1,17 +1,19 @@
 import { Box, Text, Stack, Image } from "@chakra-ui/react";
 
-const Card = () => {
+const Card = ({ isActive }) => {
 	return (
-		<Stack maxW={"50rem"}>
-			<Box width={"50rem"} position="relative">
+		<Stack maxW={"40rem"}>
+			<Box width={"40rem"} position="relative">
 				<Image src="CherryTravels.png" />
 				<Box
-					background="pink"
+					display={isActive ? "block" : "none"}
 					position="absolute"
+					background="pink"
 					bottom="2rem"
 					right="-2rem"
 					p="1rem 3rem"
 					color="gray.500"
+					transition
 				>
 					Design & Dev
 				</Box>
