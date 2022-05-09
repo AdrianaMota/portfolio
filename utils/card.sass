@@ -1,0 +1,14 @@
+.card-overlay
+    display: none
+    &-active
+        display: block
+        animation: 0.8s ease-in-out slideup
+
+@keyframes slideup
+    0%
+        opacity: 0
+        transform: translateY(5rem)
+
+    100%
+        opacity: 1
+        transform: translateY(0)

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { SvgBlob } from "react-svg-blob";
 import {
 	Stack,
@@ -10,14 +11,11 @@ import {
 } from "@chakra-ui/react";
 import { useTheme } from "@emotion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper";
+import { EffectCoverflow, Pagination, Navigation } from "swiper";
 
 import Navbar from "../components/navbar/Navbar";
 import Card from "../components/Card";
 
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
 import ClientOnly from "../components/ClientOnly";
 
 function generateShapeProps(growth, edges) {
@@ -27,9 +25,35 @@ function generateShapeProps(growth, edges) {
 	};
 }
 
+const projects = [
+	{
+		image: "CherryTravels.png",
+		workType: "Dev & Design",
+		title: "Cherry Travels",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta turpis. Nam sit amet commodo metus.",
+	},
+	{
+		image: "CherryTravels.png",
+		workType: "Dev & Design",
+		title: "Meds4Vets",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta turpis. Nam sit amet commodo metus.",
+	},
+	{
+		image: "CherryTravels.png",
+		workType: "Dev & Design",
+		title: "Leo",
+		description:
+			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta turpis. Nam sit amet commodo metus.",
+	},
+];
+
 export default function Home() {
+	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
 	return (
-		<Stack spacing={0} px="10rem">
+		<Stack spacing={0} pb="4">
 			<Navbar />
 
 			{/* Blob */}
@@ -75,7 +99,7 @@ export default function Home() {
 				backdropFilter={"blur(50px)"}
 			></Box>
 
-			<Flex direction="column" pt="5rem">
+			<Flex direction="column" pt="5rem" px="10rem">
 				<Stack direction="row" justifyContent="space-between">
 					<VStack alignItems={"left"} w="75rem">
 						<Text fontSize={"xxxl"}>Yayy!</Text>
@@ -90,12 +114,12 @@ export default function Home() {
 					</Box>
 				</Stack>
 			</Flex>
-			<Box>
+			<Box width="75%">
 				<Swiper
 					effect={"coverflow"}
-					grabCursor={true}
-					centeredSlides={true}
-					slidesPerView={3}
+					grabCursor
+					centeredSlides
+					slidesPerView={2}
 					coverflowEffect={{
 						rotate: 50,
 						stretch: 0,
@@ -104,19 +128,46 @@ export default function Home() {
 						slideShadows: true,
 					}}
 					loop
-					pagination={true}
-					modules={[EffectCoverflow, Pagination]}
+					pagination={{
+						clickable: true,
+					}}
+					speed={800}
+					parallax
+					modules={[EffectCoverflow, Pagination, Navigation]}
+					navigation
+					onSlideChange={(swiper) => setCurrentSlideIndex(swiper.realIndex)}
 				>
 					<SwiperSlide>
-						{({ isActive }) => <Card isActive={isActive} />}
+						{({ isActive }) => <Card isActive={isActive} {...projects[0]} />}
 					</SwiperSlide>
 					<SwiperSlide>
-						{({ isActive }) => <Card isActive={isActive} />}
+						{({ isActive }) => <Card isActive={isActive} {...projects[1]} />}
 					</SwiperSlide>
 					<SwiperSlide>
-						{({ isActive }) => <Card isActive={isActive} />}
+						{({ isActive }) => <Card isActive={isActive} {...projects[2]} />}
 					</SwiperSlide>
 				</Swiper>
+				<Box
+					margin="0 auto"
+					width={"54rem"}
+					// className={
+					// 	isActive
+					// 		? "card-overlay-active text-block"
+					// 		: "card-overlay text-block"
+					// }
+				>
+					<Text
+						fontFamily={"heading"}
+						fontSize="l"
+						fontWeight={"bold"}
+						color="gray.500"
+					>
+						{projects[currentSlideIndex].title}
+					</Text>
+					<Text fontSize={"1.5rem"}>
+						{projects[currentSlideIndex].description}
+					</Text>
+				</Box>
 			</Box>
 		</Stack>
 	);

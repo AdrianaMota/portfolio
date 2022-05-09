@@ -1,37 +1,40 @@
 import { Box, Text, Stack, Image } from "@chakra-ui/react";
 
-const Card = ({ isActive }) => {
+const Card = ({ isActive, workType, image, title, description }) => {
 	return (
-		<Stack maxW={"40rem"}>
-			<Box width={"40rem"} position="relative">
-				<Image src="CherryTravels.png" />
+		<Stack>
+			<Box width={"auto"} position="relative">
+				<Image src={image} />
 				<Box
-					display={isActive ? "block" : "none"}
 					position="absolute"
-					background="pink"
 					bottom="2rem"
 					right="-2rem"
 					p="1rem 3rem"
+					backgroundColor={"pink"}
 					color="gray.500"
-					transition
+					className={isActive ? "card-overlay-active" : "card-overlay"}
 				>
-					Design & Dev
+					{workType}
 				</Box>
 			</Box>
-			{/* <Text
-				fontFamily={"heading"}
-				fontSize="l"
-				fontWeight={"bold"}
-				pt="3rem"
-				color="gray.500"
+			{/* <Box
+				className={
+					isActive
+						? "card-overlay-active text-block"
+						: "card-overlay text-block"
+				}
 			>
-				Mobile Project
-			</Text>
-			<Text fontSize={"1.5rem"}>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in
-				nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta
-				turpis. Nam sit amet commodo metus.
-			</Text> */}
+				<Text
+					fontFamily={"heading"}
+					fontSize="l"
+					fontWeight={"bold"}
+					pt="3rem"
+					color="gray.500"
+				>
+					{title}
+				</Text>
+				<Text fontSize={"1.5rem"}>{description}</Text>
+			</Box> */}
 		</Stack>
 	);
 };

@@ -1,14 +1,79 @@
+%transition_all_03s
+    transition: all .3s ease
+
+%backface_visibility_hidden
+    backface-visibility: hidden
+    -webkit-backface-visibility: hidden
+
+[class^="swiper-button-"]
+    opacity: 0
+    visibility: hidden
+    @extend %transition_all_03s
+    color: white
+
 .swiper
-    width: 75%
+    width: 100%
     align-content: left
     margin: 0 !important
+    overflow: visible
+    display: flex
+    flex-direction: column
+
+    &-button-prev
+        transform: translateX(5rem)
+
+    &-button-next
+        transform: translateX(-5rem)
+
+    &-button-next,
+    &-button-prev
+
+    &:hover
+        .swiper-button-prev,
+        .swiper-button-next
+            transform: translateX(0)
+            opacity: 1
+            visibility: visible
+            color: white
 
     &-slide
         background-position: center
-        background-size: 100%
-        width: 40rem
-        margin-bottom: 5rem
+        background-size: cover
+        height: 40.5
 
     &-slide img
+        height: 40.5
         display: block
-        width: 100%
+        order: 1
+
+    .swiper-pagination-horizontal
+        position: static
+        margin-top: 3rem
+        order: 2
+
+    .swiper-pagination-bullet
+        margin: 0 1rem
+        position: relative
+        bottom: 0
+        width: 12px
+        height: 12px
+        background-color: pink
+        opacity: .4
+        @extend %transition_all_03s
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 18px
+            height: 18px
+            transform: translate(-50%, -50%)
+            border: 0px solid pink
+            border-radius: 50%
+            @extend %transition_all_03s
+        &:hover,
+        &.swiper-pagination-bullet-active
+            opacity: 1
+        &.swiper-pagination-bullet-active
+            &::before
+                border-width: 1px
