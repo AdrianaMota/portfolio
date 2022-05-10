@@ -147,15 +147,7 @@ export default function Home() {
 						{({ isActive }) => <Card isActive={isActive} {...projects[2]} />}
 					</SwiperSlide>
 				</Swiper>
-				<Box
-					margin="0 auto"
-					width={"54rem"}
-					// className={
-					// 	isActive
-					// 		? "card-overlay-active text-block"
-					// 		: "card-overlay text-block"
-					// }
-				>
+				<Box margin="0 auto" width={"54rem"}>
 					<Text
 						fontFamily={"heading"}
 						fontSize="l"
