@@ -34,14 +34,14 @@ const projects = [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta turpis. Nam sit amet commodo metus.",
 	},
 	{
-		image: "CherryTravels.png",
+		image: "Meds4Vets.png",
 		workType: "Dev & Design",
 		title: "Meds4Vets",
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta turpis. Nam sit amet commodo metus.",
 	},
 	{
-		image: "CherryTravels.png",
+		image: "Leo.png",
 		workType: "Dev & Design",
 		title: "Leo",
 		description:
@@ -114,7 +114,7 @@ export default function Home() {
 					</Box>
 				</Stack>
 			</Flex>
-			<Box width="75%">
+			<Box width="75%" pt="20rem">
 				<Swiper
 					effect={"coverflow"}
 					grabCursor

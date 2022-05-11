@@ -8,7 +8,7 @@ const Card = ({ isActive, workType, image, title, description }) => {
 				<Box
 					position="absolute"
 					bottom="2rem"
-					right="-2rem"
+					right="-1rem"
 					p="1rem 3rem"
 					backgroundColor={"pink"}
 					color="gray.500"
