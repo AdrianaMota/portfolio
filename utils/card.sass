@@ -3,11 +3,24 @@
     &-active
         display: block
         animation: 0.8s ease-in-out slideup
+.text-title
+    animation: 0.5s ease-in slidedown
+.text-description
+    animation: 0.5s ease slideup
 
 @keyframes slideup
     0%
         opacity: 0
         transform: translateY(5rem)
+
+    100%
+        opacity: 1
+        transform: translateY(0)
+
+@keyframes slidedown
+    0%
+        opacity: 0
+        transform: translateY(-5rem)
 
     100%
         opacity: 1

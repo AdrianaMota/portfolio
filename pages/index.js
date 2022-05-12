@@ -149,6 +149,7 @@ export default function Home() {
 				</Swiper>
 				<Box margin="0 auto" width={"54rem"}>
 					<Text
+						className="text-title"
 						fontFamily={"heading"}
 						fontSize="l"
 						fontWeight={"bold"}
@@ -156,7 +157,7 @@ export default function Home() {
 					>
 						{projects[currentSlideIndex].title}
 					</Text>
-					<Text fontSize={"1.5rem"}>
+					<Text fontSize={"1.5rem"} className="text-description">
 						{projects[currentSlideIndex].description}
 					</Text>
 				</Box>

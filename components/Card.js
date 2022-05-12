@@ -17,24 +17,6 @@ const Card = ({ isActive, workType, image, title, description }) => {
 					{workType}
 				</Box>
 			</Box>
-			{/* <Box
-				className={
-					isActive
-						? "card-overlay-active text-block"
-						: "card-overlay text-block"
-				}
-			>
-				<Text
-					fontFamily={"heading"}
-					fontSize="l"
-					fontWeight={"bold"}
-					pt="3rem"
-					color="gray.500"
-				>
-					{title}
-				</Text>
-				<Text fontSize={"1.5rem"}>{description}</Text>
-			</Box> */}
 		</Stack>
 	);
 };
