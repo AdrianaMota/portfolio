@@ -10,7 +10,7 @@ const Card = ({ isActive, workType, image, title, description }) => {
 					bottom="2rem"
 					right="-1rem"
 					p="1rem 3rem"
-					backgroundColor={"pink"}
+					backgroundColor={"pink.300"}
 					color="gray.500"
 					className={isActive ? "card-overlay-active" : "card-overlay"}
 				>
