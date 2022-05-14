@@ -34,16 +34,16 @@ const projects = [
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta turpis. Nam sit amet commodo metus.",
 	},
 	{
-		image: "Meds4Vets.png",
+		image: "Leo.png",
 		workType: "Dev & Design",
-		title: "Meds4Vets",
+		title: "Leo",
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta turpis. Nam sit amet commodo metus.",
 	},
 	{
-		image: "Leo.png",
+		image: "Meds4Vets.png",
 		workType: "Dev & Design",
-		title: "Leo",
+		title: "Meds4Vets",
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta turpis. Nam sit amet commodo metus.",
 	},
@@ -147,11 +147,11 @@ export default function Home() {
 						{({ isActive }) => <Card isActive={isActive} {...projects[2]} />}
 					</SwiperSlide>
 				</Swiper>
-				<Box margin="0 auto" width={"54rem"}>
+				<Box mx="auto" width={"54rem"}>
 					<Text
 						className="text-title"
 						fontFamily={"heading"}
-						fontSize="l"
+						fontSize="m"
 						fontWeight={"bold"}
 						color="gray.500"
 					>
