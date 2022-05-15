@@ -1,6 +1,6 @@
-import { Box, Text, Stack, Image } from "@chakra-ui/react";
+import { Box, Stack, Image } from "@chakra-ui/react";
 
-const Card = ({ isActive, workType, image, title, description }) => {
+const Card = ({ isActive, workType, image }) => {
 	return (
 		<Stack>
 			<Box width={"auto"} position="relative">
