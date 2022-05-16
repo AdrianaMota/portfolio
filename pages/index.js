@@ -9,14 +9,9 @@ import {
 	HStack,
 	Flex,
 } from "@chakra-ui/react";
-import { useTheme } from "@emotion/react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Navigation } from "swiper";
 
 import Navbar from "../components/navbar/Navbar";
-import Card from "../components/Card";
-
-import ClientOnly from "../components/ClientOnly";
+import Carousel from "../components/Carousel";
 
 function generateShapeProps(growth, edges) {
 	return {
@@ -25,33 +20,7 @@ function generateShapeProps(growth, edges) {
 	};
 }
 
-const projects = [
-	{
-		image: "CherryTravels.png",
-		workType: "Dev & Design",
-		title: "Cherry Travels",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta turpis. Nam sit amet commodo metus.",
-	},
-	{
-		image: "Leo.png",
-		workType: "Dev & Design",
-		title: "Leo",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta turpis. Nam sit amet commodo metus.",
-	},
-	{
-		image: "Meds4Vets.png",
-		workType: "Dev & Design",
-		title: "Meds4Vets",
-		description:
-			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate, vehicula mauris ac, efficitur purus. Nam et porta turpis. Nam sit amet commodo metus.",
-	},
-];
-
 export default function Home() {
-	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-
 	return (
 		<Stack spacing={0} pb="4">
 			<Navbar />
@@ -114,54 +83,7 @@ export default function Home() {
 					</Box>
 				</Stack>
 			</Flex>
-			<Box width="75%" pt="20rem">
-				<Swiper
-					effect={"coverflow"}
-					grabCursor
-					centeredSlides
-					slidesPerView={2}
-					coverflowEffect={{
-						rotate: 50,
-						stretch: 0,
-						depth: 100,
-						modifier: 1,
-						slideShadows: true,
-					}}
-					loop
-					pagination={{
-						clickable: true,
-					}}
-					speed={800}
-					parallax
-					modules={[EffectCoverflow, Pagination, Navigation]}
-					navigation
-					onSlideChange={(swiper) => setCurrentSlideIndex(swiper.realIndex)}
-				>
-					<SwiperSlide>
-						{({ isActive }) => <Card isActive={isActive} {...projects[0]} />}
-					</SwiperSlide>
-					<SwiperSlide>
-						{({ isActive }) => <Card isActive={isActive} {...projects[1]} />}
-					</SwiperSlide>
-					<SwiperSlide>
-						{({ isActive }) => <Card isActive={isActive} {...projects[2]} />}
-					</SwiperSlide>
-				</Swiper>
-				<Box mx="auto" width={"54rem"}>
-					<Text
-						className="text-title"
-						fontFamily={"heading"}
-						fontSize="m"
-						fontWeight={"bold"}
-						color="gray.500"
-					>
-						{projects[currentSlideIndex].title}
-					</Text>
-					<Text fontSize={"1.5rem"} className="text-description">
-						{projects[currentSlideIndex].description}
-					</Text>
-				</Box>
-			</Box>
+			<Carousel />
 		</Stack>
 	);
 }
