@@ -68,7 +68,7 @@ export default function Home() {
 				backdropFilter={"blur(50px)"}
 			></Box>
 
-			<Flex direction="column" pt="5rem" px="10rem">
+			<Flex direction="column" pt="13rem" px="10rem">
 				<Stack direction="row" justifyContent="space-between">
 					<VStack alignItems={"left"} w="75rem">
 						<Text fontSize={"xxxl"}>Yayy!</Text>
