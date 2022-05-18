@@ -1,11 +1,24 @@
 import { HStack, Flex } from "@chakra-ui/react";
 import Logo from "./Logo";
+import { useState, useEffect } from "react";
 import NavItem from "./NavItem";
 
 const Navbar = () => {
+	const [navbar, setNavbar] = useState(false);
+	const changeBackground = () => {
+		if (window.scrollY >= 66) {
+			setNavbar(true);
+		} else {
+			setNavbar(false);
+		}
+	};
+	useEffect(() => {
+		changeBackground();
+		window.addEventListener("scroll", changeBackground);
+	});
 	return (
 		<Flex
-			bg="rgba(255,255,255,0.5)"
+			bg={navbar ? "rgba(255,255,255,0.5)" : "transparent"}
 			backdropFilter={"blur(50px)"}
 			position={"fixed"}
 			w="100%"

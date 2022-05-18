@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { SvgBlob } from "react-svg-blob";
 import {
 	Stack,
