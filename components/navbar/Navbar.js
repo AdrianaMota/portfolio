@@ -6,7 +6,7 @@ import NavItem from "./NavItem";
 const Navbar = () => {
 	const [navbar, setNavbar] = useState(false);
 	const changeBackground = () => {
-		if (window.scrollY >= 66) {
+		if (window.scrollY >= 100) {
 			setNavbar(true);
 		} else {
 			setNavbar(false);
@@ -18,7 +18,7 @@ const Navbar = () => {
 	});
 	return (
 		<Flex
-			bg={navbar ? "rgba(255,255,255,0.5)" : "transparent"}
+			bg={navbar ? "rgba(255,255,255,0.4)" : "transparent"}
 			backdropFilter={"blur(50px)"}
 			position={"fixed"}
 			w="100%"

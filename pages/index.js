@@ -37,7 +37,7 @@ export default function Home() {
 			<Box position="absolute" w="600px" zIndex="-1">
 				<SvgBlob
 					variant="solid"
-					color="#FFAEAE"
+					color="#FFD391"
 					shapeProps={generateShapeProps(7, 14)}
 				/>
 			</Box>
@@ -52,7 +52,7 @@ export default function Home() {
 			>
 				<SvgBlob
 					variant="solid"
-					color="#FFD391"
+					color="#FFAEAE"
 					shapeProps={generateShapeProps(4, 8)}
 				/>
 			</Box>
