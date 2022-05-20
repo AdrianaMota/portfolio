@@ -18,7 +18,8 @@ const Navbar = () => {
 	});
 	return (
 		<Flex
-			bg={navbar ? "rgba(255,255,255,0.4)" : "transparent"}
+			zIndex={100000}
+			bg={navbar ? "rgba(255,255,255,0.7)" : "transparent"}
 			backdropFilter={"blur(50px)"}
 			position={"fixed"}
 			w="100%"

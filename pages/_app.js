@@ -3,6 +3,7 @@ import defaultTheme from "../utils/theme";
 import "../utils/link.sass";
 import "../utils/swiper.sass";
 import "../utils/card.sass";
+import "../utils/modal.sass";
 
 import "swiper/scss";
 import "swiper/scss/effect-coverflow";

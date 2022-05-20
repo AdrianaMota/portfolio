@@ -1,10 +1,14 @@
-import { Box, Stack, Image } from "@chakra-ui/react";
+import { Box, Stack, Image, LinkBox, LinkOverlay } from "@chakra-ui/react";
 
-const Card = ({ isActive, workType, image }) => {
+const Card = ({ isActive, workType, image, handleClick }) => {
 	return (
 		<Stack>
 			<Box width={"auto"} position="relative">
-				<Image src={image} />
+				<LinkBox>
+					<LinkOverlay onClick={console.log("clicked")}>
+						<Image src={image} />
+					</LinkOverlay>
+				</LinkBox>
 				<Box
 					position="absolute"
 					bottom="2rem"

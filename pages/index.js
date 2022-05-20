@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 
 import Navbar from "../components/navbar/Navbar";
-import Carousel from "../components/Carousel";
+import Carousel from "../components/Slider/Carousel";
 
 function generateShapeProps(growth, edges) {
 	return {
@@ -77,12 +77,13 @@ export default function Home() {
 						</Text>
 					</VStack>
 
-					<Box pr="0">
+					<Box pr="0" position={"sticky"}>
 						<Image src={`Bunny.gif?${Math.random()}`} width="15rem" />
 					</Box>
 				</Stack>
 			</Flex>
 			<Carousel />
+			<Box p="40rem"></Box>
 		</Stack>
 	);
 }
