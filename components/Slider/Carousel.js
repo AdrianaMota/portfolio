@@ -14,7 +14,7 @@ const Carousel = () => {
 
 	const openModal = () => {
 		setVisibility("modal--active");
-		console.log("modaaal");
+		console.log("");
 	};
 
 	return (

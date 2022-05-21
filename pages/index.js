@@ -1,13 +1,5 @@
 import { SvgBlob } from "react-svg-blob";
-import {
-	Stack,
-	Box,
-	Text,
-	VStack,
-	Image,
-	HStack,
-	Flex,
-} from "@chakra-ui/react";
+import { Stack, Box, Text, VStack, Image, Flex } from "@chakra-ui/react";
 
 import Navbar from "../components/navbar/Navbar";
 import Carousel from "../components/Slider/Carousel";
