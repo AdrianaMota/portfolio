@@ -61,16 +61,27 @@ export default function Home() {
 
 			<Flex direction="column" pt="13rem" px="10rem">
 				<Stack direction="row" justifyContent="space-between">
-					<VStack alignItems={"left"} w="75rem">
-						<Text fontSize={"xxxl"}>Yayy!</Text>
-						<Text color="gray.500" lineHeight={1.8}>
-							You're here 🎉 <br />
-							I'm Adriana Mota a UI Developer
-						</Text>
+					<VStack
+						alignItems={"left"}
+						w="75rem"
+						justifyContent={"space-between"}
+						h="80vh"
+					>
+						<Box>
+							<Text fontSize={"xxxl"}>Yayy!</Text>
+							<Text color="gray.500" lineHeight={1.8}>
+								You're here 🎉 <br />
+								I'm Adriana Mota a UI Developer
+							</Text>
+						</Box>
+						<Image src="arrow.png" width={"2rem"} />
 					</VStack>
-
-					<Box pr="0" position={"sticky"}>
-						<Image src={`Bunny.gif?${Math.random()}`} width="15rem" />
+					<Box pr="10rem">
+						<Image
+							position={"fixed"}
+							src={`Bunny.gif?${Math.random()}`}
+							width="15rem"
+						/>
 					</Box>
 				</Stack>
 			</Flex>

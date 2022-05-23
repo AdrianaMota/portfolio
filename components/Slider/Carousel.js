@@ -19,7 +19,7 @@ const Carousel = () => {
 
 	return (
 		<Box>
-			<Box width="75%" pt="20rem">
+			<Box width="75%" pt="10rem">
 				<Swiper
 					effect={"coverflow"}
 					grabCursor
