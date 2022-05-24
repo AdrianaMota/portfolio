@@ -1,7 +1,6 @@
 import { Image, Box } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 
-const Modal = ({ handleClose, text, image, visibility }) => {
+const Modal = ({ image, visibility }) => {
 	return (
 		<Box className={visibility}>
 			<Image className="modal-image" src={image} />
