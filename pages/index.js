@@ -3,6 +3,7 @@ import { Stack, Box, Text, VStack, Image, Flex } from "@chakra-ui/react";
 
 import Navbar from "../components/navbar/Navbar";
 import Carousel from "../components/Slider/Carousel";
+import ReactFullpage from "@fullpage/react-fullpage";
 
 function generateShapeProps(growth, edges) {
 	return {
