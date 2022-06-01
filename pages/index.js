@@ -59,35 +59,52 @@ export default function Home() {
 				bg="rgba(255,255,255,0.8)"
 				backdropFilter={"blur(50px)"}
 			></Box>
-
-			<Flex direction="column" pt="13rem" px="10rem">
-				<Stack direction="row" justifyContent="space-between">
-					<VStack
-						alignItems={"left"}
-						w="75rem"
-						justifyContent={"space-between"}
-						h="80vh"
-					>
+			<ReactFullpage
+				licenseKey={"YOUR_LICENSE_KEY"}
+				scrollOverflow={true}
+				sectionsColor={["orange", "purple", "green"]}
+				onLeave={this.onLeave.bind(this)}
+				afterLoad={this.afterLoad.bind(this)}
+				render={({ state, fullpageApi }) => {
+					return (
 						<Box>
-							<Text fontSize={"xxxl"}>Yayy!</Text>
-							<Text color="gray.500" lineHeight={1.8}>
-								You're here 🎉 <br />
-								I'm Adriana Mota a UI Developer
-							</Text>
+							<Flex
+								direction="column"
+								pt="13rem"
+								px="10rem"
+								className="section"
+							>
+								<Stack direction="row" justifyContent="space-between">
+									<VStack
+										alignItems={"left"}
+										w="75rem"
+										justifyContent={"space-between"}
+										h="80vh"
+									>
+										<Box>
+											<Text fontSize={"xxxl"}>Yayy!</Text>
+											<Text color="gray.500" lineHeight={1.8}>
+												You're here 🎉 <br />
+												I'm Adriana Mota a UI Developer
+											</Text>
+										</Box>
+										<Image src="arrow.png" width={"2rem"} />
+									</VStack>
+									<Box pr="10rem">
+										<Image
+											position={"fixed"}
+											src={`Bunny.gif?${Math.random()}`}
+											width="15rem"
+										/>
+									</Box>
+								</Stack>
+							</Flex>
+							<Carousel className="section" />
+							<Box p="40rem"></Box>
 						</Box>
-						<Image src="arrow.png" width={"2rem"} />
-					</VStack>
-					<Box pr="10rem">
-						<Image
-							position={"fixed"}
-							src={`Bunny.gif?${Math.random()}`}
-							width="15rem"
-						/>
-					</Box>
-				</Stack>
-			</Flex>
-			<Carousel />
-			<Box p="40rem"></Box>
+					);
+				}}
+			/>
 		</Stack>
 	);
 }
