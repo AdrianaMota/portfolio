@@ -59,49 +59,46 @@ export default function Home() {
 				bg="rgba(255,255,255,0.8)"
 				backdropFilter={"blur(50px)"}
 			></Box>
+
+			<Box pr="10rem" position={"absolute"} top="20%" right="10%">
+				<Image
+					position={"fixed"}
+					src={`Bunny.gif?${Math.random()}`}
+					width="15rem"
+				/>
+			</Box>
 			<ReactFullpage
-				licenseKey={"YOUR_LICENSE_KEY"}
-				scrollOverflow={true}
-				sectionsColor={["orange", "purple", "green"]}
-				onLeave={this.onLeave.bind(this)}
-				afterLoad={this.afterLoad.bind(this)}
+				scrollingSpeed={1000}
+				autoScrolling={true}
 				render={({ state, fullpageApi }) => {
 					return (
-						<Box>
-							<Flex
-								direction="column"
-								pt="13rem"
-								px="10rem"
-								className="section"
-							>
-								<Stack direction="row" justifyContent="space-between">
-									<VStack
-										alignItems={"left"}
-										w="75rem"
-										justifyContent={"space-between"}
-										h="80vh"
-									>
-										<Box>
-											<Text fontSize={"xxxl"}>Yayy!</Text>
-											<Text color="gray.500" lineHeight={1.8}>
-												You're here 🎉 <br />
-												I'm Adriana Mota a UI Developer
-											</Text>
-										</Box>
-										<Image src="arrow.png" width={"2rem"} />
-									</VStack>
-									<Box pr="10rem">
-										<Image
-											position={"fixed"}
-											src={`Bunny.gif?${Math.random()}`}
-											width="15rem"
-										/>
-									</Box>
-								</Stack>
-							</Flex>
-							<Carousel className="section" />
+						<ReactFullpage.Wrapper>
+							<div className="section">
+								<Flex direction="column" pt="13rem" px="10rem">
+									<Stack direction="row" justifyContent="space-between">
+										<VStack
+											alignItems={"left"}
+											w="75rem"
+											justifyContent={"space-between"}
+											h="80vh"
+										>
+											<Box>
+												<Text fontSize={"xxxl"}>Yayy!</Text>
+												<Text color="gray.500" lineHeight={1.8}>
+													You're here 🎉 <br />
+													I'm Adriana Mota a UI Developer
+												</Text>
+											</Box>
+											<Image src="arrow.png" width={"2rem"} />
+										</VStack>
+									</Stack>
+								</Flex>
+							</div>
+							<div className="section">
+								<Carousel />
+							</div>
 							<Box p="40rem"></Box>
-						</Box>
+						</ReactFullpage.Wrapper>
 					);
 				}}
 			/>
