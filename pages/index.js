@@ -60,6 +60,7 @@ export default function Home() {
 				backdropFilter={"blur(50px)"}
 			></Box>
 
+			{/* Little Guy */}
 			<Box pr="10rem" position={"absolute"} top="20%" right="10%">
 				<Image
 					position={"fixed"}
@@ -67,6 +68,7 @@ export default function Home() {
 					width="15rem"
 				/>
 			</Box>
+
 			<ReactFullpage
 				scrollingSpeed={1000}
 				autoScrolling={true}
