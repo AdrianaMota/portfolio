@@ -10,12 +10,6 @@ import { projects } from "./utils/projects";
 
 const Carousel = () => {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-	const [visibility, setVisibility] = useState("modal");
-
-	const openModal = () => {
-		setVisibility("modal--active");
-		console.log("Clicked");
-	};
 
 	return (
 		<Box>
@@ -43,13 +37,7 @@ const Carousel = () => {
 					onSlideChange={(swiper) => setCurrentSlideIndex(swiper.realIndex)}
 				>
 					<SwiperSlide>
-						{({ isActive }) => (
-							<Card
-								handleClick={openModal()}
-								isActive={isActive}
-								{...projects[0]}
-							/>
-						)}
+						{({ isActive }) => <Card isActive={isActive} {...projects[0]} />}
 					</SwiperSlide>
 					<SwiperSlide>
 						{({ isActive }) => <Card isActive={isActive} {...projects[1]} />}
@@ -73,7 +61,6 @@ const Carousel = () => {
 					</Text>
 				</Box>
 			</Box>
-			<Modal visibility={visibility} />
 		</Box>
 	);
 };
