@@ -3,7 +3,6 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import { useState } from "react";
 import { Box, Text } from "@chakra-ui/react";
 
-import Modal from "./Modal";
 import Card from "./Card";
 
 import { projects } from "./utils/projects";
