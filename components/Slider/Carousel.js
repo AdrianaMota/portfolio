@@ -2,9 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import { useState } from "react";
 import { Box, Text } from "@chakra-ui/react";
-
 import Card from "./Card";
-
 import { projects } from "./utils/projects";
 
 const Carousel = () => {
