@@ -1,12 +1,21 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import { useState } from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, HStack, Image, Text } from "@chakra-ui/react";
 import Card from "./Card";
 import { projects } from "./utils/projects";
 
 const Carousel = () => {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+
+	switch (projects.tech) {
+		case "react": {
+			<Image src="Logo.png" />;
+		}
+		case "figma": {
+			<Image src="Leo.png" />;
+		}
+	}
 
 	return (
 		<Box>
@@ -56,6 +65,7 @@ const Carousel = () => {
 					<Text fontSize={"1.5rem"} className="text-description">
 						{projects[currentSlideIndex].description}
 					</Text>
+					<HStack>{projects[currentSlideIndex].tech}</HStack>
 				</Box>
 			</Box>
 		</Box>

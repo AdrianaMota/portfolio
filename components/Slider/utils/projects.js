@@ -1,3 +1,5 @@
+import { Image } from "@chakra-ui/react";
+
 export const projects = [
 	{
 		image: "CherryTravels.png",
@@ -5,6 +7,7 @@ export const projects = [
 		title: "Cherry Travels",
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
+		tech: ["react", "figma", "next"],
 	},
 	{
 		image: "Leo.png",
