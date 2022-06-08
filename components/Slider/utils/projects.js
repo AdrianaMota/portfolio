@@ -7,7 +7,7 @@ export const projects = [
 		title: "Cherry Travels",
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
-		tech: ["react", "figma", "next"],
+		tech: ["Logo.png", "Logo.png", "Logo.png"],
 	},
 	{
 		image: "Leo.png",
@@ -15,6 +15,7 @@ export const projects = [
 		title: "Leo",
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
+		tech: ["Logo.png", "Logo.png", "Logo.png", "Logo.png"],
 	},
 	{
 		image: "Meds4Vets.png",
@@ -22,5 +23,6 @@ export const projects = [
 		title: "Meds4Vets",
 		description:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
+		tech: ["Logo.png", "Logo.png"],
 	},
 ];

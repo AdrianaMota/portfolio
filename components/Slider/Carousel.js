@@ -8,15 +8,6 @@ import { projects } from "./utils/projects";
 const Carousel = () => {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 
-	switch (projects.tech) {
-		case "react": {
-			<Image src="Logo.png" />;
-		}
-		case "figma": {
-			<Image src="Leo.png" />;
-		}
-	}
-
 	return (
 		<Box>
 			<Box width="75%" pt="10rem">
@@ -62,10 +53,14 @@ const Carousel = () => {
 					>
 						{projects[currentSlideIndex].title}
 					</Text>
-					<Text fontSize={"1.5rem"} className="text-description">
+					<Text fontSize={"1.5rem"} className="text-description" mb="2rem">
 						{projects[currentSlideIndex].description}
 					</Text>
-					<HStack>{projects[currentSlideIndex].tech}</HStack>
+					<HStack>
+						{projects[currentSlideIndex].tech.map((value) => (
+							<Image src={value} width="2rem" />
+						))}
+					</HStack>
 				</Box>
 			</Box>
 		</Box>
