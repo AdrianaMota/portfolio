@@ -1,7 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import { useState } from "react";
+import { AnimateSharedLayout, AnimatePresence, motion } from "framer-motion";
 import { Box, HStack, Image, Text } from "@chakra-ui/react";
+
 import Card from "./Card";
 import { projects } from "./utils/projects";
 
@@ -33,15 +35,21 @@ const Carousel = () => {
 					navigation
 					onSlideChange={(swiper) => setCurrentSlideIndex(swiper.realIndex)}
 				>
-					<SwiperSlide>
-						{({ isActive }) => <Card isActive={isActive} {...projects[0]} />}
-					</SwiperSlide>
-					<SwiperSlide>
-						{({ isActive }) => <Card isActive={isActive} {...projects[1]} />}
-					</SwiperSlide>
-					<SwiperSlide>
-						{({ isActive }) => <Card isActive={isActive} {...projects[2]} />}
-					</SwiperSlide>
+					<AnimateSharedLayout type="crossfade">
+						<SwiperSlide>
+							{({ isActive }) => <Card isActive={isActive} {...projects[0]} />}
+						</SwiperSlide>
+						<AnimatePresence>
+							<motion.img src={projects[currentSlideIndex].image} width="50%" />
+						</AnimatePresence>
+
+						<SwiperSlide>
+							{({ isActive }) => <Card isActive={isActive} {...projects[1]} />}
+						</SwiperSlide>
+						<SwiperSlide>
+							{({ isActive }) => <Card isActive={isActive} {...projects[2]} />}
+						</SwiperSlide>
+					</AnimateSharedLayout>
 				</Swiper>
 				<Box mx="auto" width={"54rem"}>
 					<Text
