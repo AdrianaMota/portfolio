@@ -72,7 +72,7 @@ export default function Home() {
 			<ReactFullpage
 				scrollingSpeed={1000}
 				autoScrolling={true}
-				render={({ state, fullpageApi }) => {
+				render={({}) => {
 					return (
 						<ReactFullpage.Wrapper>
 							<div className="section">
