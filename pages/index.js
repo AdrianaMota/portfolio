@@ -99,7 +99,9 @@ export default function Home() {
 							<div className="section">
 								<Carousel />
 							</div>
-							<Box p="40rem"></Box>
+							<div className="section">
+								<Box p="40rem"></Box>
+							</div>
 						</ReactFullpage.Wrapper>
 					);
 				}}
