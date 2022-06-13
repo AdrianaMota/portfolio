@@ -35,21 +35,16 @@ const Carousel = () => {
 					navigation
 					onSlideChange={(swiper) => setCurrentSlideIndex(swiper.realIndex)}
 				>
-					<AnimateSharedLayout type="crossfade">
-						<SwiperSlide>
-							{({ isActive }) => <Card isActive={isActive} {...projects[0]} />}
-						</SwiperSlide>
-						<AnimatePresence>
-							<motion.img src={projects[currentSlideIndex].image} width="50%" />
-						</AnimatePresence>
+					<SwiperSlide>
+						{({ isActive }) => <Card isActive={isActive} {...projects[0]} />}
+					</SwiperSlide>
 
-						<SwiperSlide>
-							{({ isActive }) => <Card isActive={isActive} {...projects[1]} />}
-						</SwiperSlide>
-						<SwiperSlide>
-							{({ isActive }) => <Card isActive={isActive} {...projects[2]} />}
-						</SwiperSlide>
-					</AnimateSharedLayout>
+					<SwiperSlide>
+						{({ isActive }) => <Card isActive={isActive} {...projects[1]} />}
+					</SwiperSlide>
+					<SwiperSlide>
+						{({ isActive }) => <Card isActive={isActive} {...projects[2]} />}
+					</SwiperSlide>
 				</Swiper>
 				<Box mx="auto" width={"54rem"}>
 					<Text
