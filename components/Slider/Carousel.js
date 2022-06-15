@@ -3,13 +3,17 @@ import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import { useState } from "react";
 import { AnimateSharedLayout, AnimatePresence, motion } from "framer-motion";
 import { Box, HStack, Image, Text } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 import Card from "./Card";
 import { projects } from "./utils/projects";
 
 const Carousel = () => {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-
+	const router = useRouter();
+	const handleClick = () => {
+		router.push("../../pages/project.js");
+	};
 	return (
 		<Box>
 			<Box width="75%" pt="10rem">
@@ -35,10 +39,16 @@ const Carousel = () => {
 					navigation
 					onSlideChange={(swiper) => setCurrentSlideIndex(swiper.realIndex)}
 				>
+					{/* Animate shared layout https://www.framer.com/docs/animate-shared-layout/ */}
 					<SwiperSlide>
-						{({ isActive }) => <Card isActive={isActive} {...projects[0]} />}
+						{({ isActive }) => (
+							<Card
+								isActive={isActive}
+								{...projects[0]}
+								handleClick={handleClick}
+							/>
+						)}
 					</SwiperSlide>
-
 					<SwiperSlide>
 						{({ isActive }) => <Card isActive={isActive} {...projects[1]} />}
 					</SwiperSlide>
