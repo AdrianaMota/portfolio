@@ -1,11 +1,9 @@
-import { Box, Image, Stack, Text } from "@chakra-ui/react";
+import { Stack, Box, Text, VStack, Image, Flex } from "@chakra-ui/react";
 
-const project = () => {
+export default function Home() {
 	return (
-		<Stack>
-			<Image src={f} />
+		<Stack spacing={0} pb="4">
+			<Image />
 		</Stack>
 	);
-};
-
-export default project;
+}
