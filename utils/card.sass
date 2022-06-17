@@ -8,6 +8,29 @@
 .text-description
     animation: 0.3s ease slideup
 
+.card
+    background-color: black
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    &__text
+        position: absolute
+        align: center
+        color: white
+        z-index: 100
+        opacity: 0
+        transform: translateY(2rem)
+        transition: all 0.8s
+    &__image
+        transition: all 0.8s
+        &:hover
+            opacity: 0.8
+            transform: scale(1.03)
+        &:hover > .card__text
+            opacity: 1
+            transform: translateY(0)
+
 @keyframes slideup
     0%
         opacity: 0
