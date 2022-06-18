@@ -11,7 +11,7 @@ const Card = ({ isActive, workType, image, handleClick }) => {
 	return (
 		<Stack>
 			<Box width={"auto"} position="relative">
-				<Box className="card">
+				<Box className={isActive ? "card" : ""}>
 					<Text className="card__text">View More</Text>
 					<LinkBox className={isActive ? "card__image" : ""}>
 						<LinkOverlay onClick={handleClick}>
