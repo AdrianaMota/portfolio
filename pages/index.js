@@ -1,5 +1,6 @@
 import { SvgBlob } from "react-svg-blob";
 import { Stack, Box, Text, VStack, Image, Flex } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 import Navbar from "../components/navbar/Navbar";
 import Carousel from "../components/Slider/Carousel";
@@ -13,6 +14,11 @@ function generateShapeProps(growth, edges) {
 }
 
 export default function Home() {
+	const router = useRouter();
+	const handleClick = () => {
+		router.push("./project");
+	};
+
 	return (
 		<Stack spacing={0} pb="4">
 			<Navbar />
@@ -97,7 +103,7 @@ export default function Home() {
 								</Flex>
 							</div>
 							<div className="section">
-								<Carousel />
+								<Carousel handleClick={handleClick} />
 							</div>
 							<div className="section">
 								<Box p="40rem"></Box>

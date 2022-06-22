@@ -8,12 +8,8 @@ import { useRouter } from "next/router";
 import Card from "./Card";
 import { projects } from "./utils/projects";
 
-const Carousel = () => {
+const Carousel = ({ handleClick }) => {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-	const router = useRouter();
-	const handleClick = () => {
-		router.push("../../pages/project.js");
-	};
 	return (
 		<Box>
 			<Box width="75%" pt="10rem">
@@ -50,10 +46,22 @@ const Carousel = () => {
 						)}
 					</SwiperSlide>
 					<SwiperSlide>
-						{({ isActive }) => <Card isActive={isActive} {...projects[1]} />}
+						{({ isActive }) => (
+							<Card
+								isActive={isActive}
+								{...projects[1]}
+								handleClick={handleClick}
+							/>
+						)}
 					</SwiperSlide>
 					<SwiperSlide>
-						{({ isActive }) => <Card isActive={isActive} {...projects[2]} />}
+						{({ isActive }) => (
+							<Card
+								isActive={isActive}
+								{...projects[2]}
+								handleClick={handleClick}
+							/>
+						)}
 					</SwiperSlide>
 				</Swiper>
 				<Box mx="auto" width={"54rem"}>
