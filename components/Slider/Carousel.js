@@ -1,9 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
 import { useState } from "react";
-import { AnimateSharedLayout, AnimatePresence, motion } from "framer-motion";
 import { Box, HStack, Image, Text } from "@chakra-ui/react";
-import { useRouter } from "next/router";
 
 import Card from "./Card";
 import { projects } from "./utils/projects";
