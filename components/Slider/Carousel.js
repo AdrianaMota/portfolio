@@ -40,7 +40,9 @@ const Carousel = ({ handleClick }) => {
 							<Card
 								isActive={isActive}
 								{...projects[0]}
-								handleClick={handleClick}
+								handleClick={(event) =>
+									handleClick(projects[currentSlideIndex].image)
+								}
 							/>
 						)}
 					</SwiperSlide>
@@ -49,7 +51,9 @@ const Carousel = ({ handleClick }) => {
 							<Card
 								isActive={isActive}
 								{...projects[1]}
-								handleClick={handleClick}
+								handleClick={(event) =>
+									handleClick(projects[currentSlideIndex].image)
+								}
 							/>
 						)}
 					</SwiperSlide>
@@ -58,7 +62,9 @@ const Carousel = ({ handleClick }) => {
 							<Card
 								isActive={isActive}
 								{...projects[2]}
-								handleClick={handleClick}
+								handleClick={(event) =>
+									handleClick(projects[currentSlideIndex].image)
+								}
 							/>
 						)}
 					</SwiperSlide>

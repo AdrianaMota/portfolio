@@ -15,8 +15,10 @@ function generateShapeProps(growth, edges) {
 
 export default function Home() {
 	const router = useRouter();
-	const handleClick = () => {
+	const handleClick = (img) => {
 		router.push("./project");
+
+		console.log(img);
 	};
 
 	return (
