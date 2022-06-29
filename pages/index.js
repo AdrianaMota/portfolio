@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Navbar from "../components/navbar/Navbar";
 import Carousel from "../components/Slider/Carousel";
 import ReactFullpage from "@fullpage/react-fullpage";
+import create from "zustand";
 
 function generateShapeProps(growth, edges) {
 	return {
@@ -12,6 +13,10 @@ function generateShapeProps(growth, edges) {
 		edges: edges,
 	};
 }
+
+const useStore = create((set) => ({
+	image: "",
+}));
 
 export default function Home() {
 	const router = useRouter();
