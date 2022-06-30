@@ -6,10 +6,10 @@ import { Box, HStack, Image, Text } from "@chakra-ui/react";
 import Card from "./Card";
 import { projects } from "./utils/projects";
 
-const Carousel = ({ handleClick }) => {
+const Carousel = () => {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 	return (
-		//https://stackoverflow.com/questions/38394015/how-to-pass-data-from-child-component-to-its-parent-in-reactjs
+		// https://stackoverflow.com/questions/38394015/how-to-pass-data-from-child-component-to-its-parent-in-reactjs
 		<Box>
 			<Box width="75%" pt="10rem">
 				<Swiper
@@ -40,9 +40,7 @@ const Carousel = ({ handleClick }) => {
 							<Card
 								isActive={isActive}
 								{...projects[0]}
-								handleClick={(event) =>
-									handleClick(projects[currentSlideIndex].image)
-								}
+								slug={projects[currentSlideIndex].slug}
 							/>
 						)}
 					</SwiperSlide>
@@ -51,9 +49,7 @@ const Carousel = ({ handleClick }) => {
 							<Card
 								isActive={isActive}
 								{...projects[1]}
-								handleClick={(event) =>
-									handleClick(projects[currentSlideIndex].image)
-								}
+								slug={projects[currentSlideIndex].slug}
 							/>
 						)}
 					</SwiperSlide>
@@ -62,9 +58,7 @@ const Carousel = ({ handleClick }) => {
 							<Card
 								isActive={isActive}
 								{...projects[2]}
-								handleClick={(event) =>
-									handleClick(projects[currentSlideIndex].image)
-								}
+								slug={projects[currentSlideIndex].slug}
 							/>
 						)}
 					</SwiperSlide>

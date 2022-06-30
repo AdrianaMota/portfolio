@@ -20,11 +20,6 @@ const useStore = create((set) => ({
 
 export default function Home() {
 	const router = useRouter();
-	const handleClick = (img) => {
-		router.push("./project");
-
-		console.log(img);
-	};
 
 	return (
 		<Stack spacing={0} pb="4">
@@ -110,7 +105,7 @@ export default function Home() {
 								</Flex>
 							</div>
 							<div className="section">
-								<Carousel handleClick={handleClick} />
+								<Carousel />
 							</div>
 							<div className="section">
 								<Box p="40rem"></Box>
