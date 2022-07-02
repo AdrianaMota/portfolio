@@ -9,6 +9,7 @@ const ProjectBySlug = () => {
 	}
 
 	const currentProject = projects.find(isCurrent);
+	console.log(currentProject.workType);
 
 	return <div>{JSON.stringify(query)}</div>;
 };
