@@ -74,7 +74,7 @@ const Carousel = () => {
 						{projects[currentSlideIndex].title}
 					</Text>
 					<Text fontSize={"1.5rem"} className="text-description" mb="2rem">
-						{projects[currentSlideIndex].description}
+						{projects[currentSlideIndex].summary}
 					</Text>
 					<HStack>
 						{projects[currentSlideIndex].tech.map((value) => (
