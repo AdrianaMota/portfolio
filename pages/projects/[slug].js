@@ -30,6 +30,11 @@ const ProjectBySlug = () => {
 						{currentProject?.title}
 					</Heading>
 					<Box
+						sx={{
+							"p:not(:last-child)": {
+								marginBottom: "3rem",
+							},
+						}}
 						dangerouslySetInnerHTML={{ __html: currentProject?.description }}
 					></Box>
 				</Stack>
