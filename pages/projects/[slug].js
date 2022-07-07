@@ -1,9 +1,12 @@
 import {
 	Box,
+	Button,
 	Flex,
 	Heading,
 	HStack,
+	IconButton,
 	Image,
+	Link,
 	Stack,
 	Text,
 	VStack,
@@ -25,7 +28,7 @@ const ProjectBySlug = () => {
 		<div>
 			<Flex>
 				<Image src={currentProject?.image} width="65vw" />
-				<Stack pl="3rem" pt="3rem">
+				<Box pl="3rem" pt="3rem">
 					<Heading as="h1" fontSize={"5rem"} mb="3rem">
 						{currentProject?.title}
 					</Heading>
@@ -37,7 +40,24 @@ const ProjectBySlug = () => {
 						}}
 						dangerouslySetInnerHTML={{ __html: currentProject?.description }}
 					></Box>
-				</Stack>
+					<Box>
+						<Button
+							mt={"3rem"}
+							color="gray.500"
+							colorScheme="yellow"
+							fontWeight={"normal"}
+							fontSize="15px"
+							p="2rem 3rem"
+							src="#"
+						>
+							Visit Website
+						</Button>
+						<HStack>
+							<Text fontSize="15px">View on</Text>
+							<Image src="/github.png" width="2.5rem" />
+						</HStack>
+					</Box>
+				</Box>
 			</Flex>
 		</div>
 	);
