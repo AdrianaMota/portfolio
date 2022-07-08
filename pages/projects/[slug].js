@@ -52,10 +52,12 @@ const ProjectBySlug = () => {
 						>
 							Visit Website
 						</Button>
-						<HStack>
-							<Text fontSize="15px">View on</Text>
-							<Image src="/github.png" width="2.5rem" />
-						</HStack>
+						<Link>
+							<HStack>
+								<Text fontSize="15px">View on</Text>
+								<Image src="/github.png" width="2.5rem" />
+							</HStack>
+						</Link>
 					</Box>
 				</Box>
 			</Flex>
