@@ -40,9 +40,8 @@ const ProjectBySlug = () => {
 						}}
 						dangerouslySetInnerHTML={{ __html: currentProject?.description }}
 					></Box>
-					<Box>
+					<HStack mt={"3rem"}>
 						<Button
-							mt={"3rem"}
 							color="gray.500"
 							colorScheme="yellow"
 							fontWeight={"normal"}
@@ -53,12 +52,12 @@ const ProjectBySlug = () => {
 							Visit Website
 						</Button>
 						<Link>
-							<HStack>
+							<HStack p="2rem 3rem">
 								<Text fontSize="15px">View on</Text>
 								<Image src="/github.png" width="2.5rem" />
 							</HStack>
 						</Link>
-					</Box>
+					</HStack>
 				</Box>
 			</Flex>
 		</div>
