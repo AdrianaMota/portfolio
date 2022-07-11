@@ -54,7 +54,7 @@ const ProjectBySlug = () => {
 						<Link>
 							<HStack p="2rem 3rem">
 								<Text fontSize="15px">View on</Text>
-								<Image src="/github.png" width="2.5rem" />
+								<Image src="/github.png" width="2.5rem" pl="1rem" />
 							</HStack>
 						</Link>
 					</HStack>
