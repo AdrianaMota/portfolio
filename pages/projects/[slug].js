@@ -51,8 +51,8 @@ const ProjectBySlug = () => {
 						>
 							Visit Website
 						</Button>
-						<Link>
-							<HStack p="8.8px 3rem" className="btn__git" ml="1rem">
+						<Link href={currentProject?.github} isExternal ml="2rem">
+							<HStack p="8.8px 3rem" className="btn__git">
 								<Text fontSize="15px">View on</Text>
 								<Image src="/github.png" width="2.5rem" pl="5px" />
 							</HStack>

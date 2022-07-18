@@ -6,6 +6,7 @@ export const projects = [
 		image: "/CherryTravels.png",
 		workType: "Dev & Design",
 		title: "Cherry Travels",
+		github: "https://github.com/AdrianaMota/CherryTravels",
 		summary:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
 		tech: ["html.png", "sass.png"],
@@ -16,6 +17,7 @@ export const projects = [
 		image: "/Leo.png",
 		workType: "Dev & Design",
 		title: "Leo",
+		github: "https://github.com/AdrianaMota/leo",
 		summary:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
 		tech: ["react.png", "chakra.png"],
@@ -27,6 +29,7 @@ export const projects = [
 		image: "/Meds4Vets.png",
 		workType: "Dev & Design",
 		title: "Meds4Vets",
+		github: "https://github.com/AdrianaMota/meds4vets",
 		summary:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
 		tech: ["webflow.png", "javascript.png"],
