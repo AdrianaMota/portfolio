@@ -6,6 +6,7 @@ export const projects = [
 		image: "/CherryTravels.png",
 		workType: "Dev & Design",
 		title: "Cherry Travels",
+		website: "https://cherrytravels.netlify.com/",
 		github: "https://github.com/AdrianaMota/CherryTravels",
 		summary:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
@@ -17,6 +18,7 @@ export const projects = [
 		image: "/Leo.png",
 		workType: "Dev & Design",
 		title: "Leo",
+		website: "#",
 		github: "https://github.com/AdrianaMota/leo",
 		summary:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
@@ -29,6 +31,7 @@ export const projects = [
 		image: "/Meds4Vets.png",
 		workType: "Dev & Design",
 		title: "Meds4Vets",
+		website: "https://www.meds4vets.org/",
 		github: "https://github.com/AdrianaMota/meds4vets",
 		summary:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
