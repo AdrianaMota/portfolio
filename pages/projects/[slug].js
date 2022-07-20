@@ -41,7 +41,11 @@ const ProjectBySlug = () => {
 						dangerouslySetInnerHTML={{ __html: currentProject?.description }}
 					></Box>
 					<HStack mt={"3rem"}>
-						<Link href={currentProject?.website} isExternal>
+						<Link
+							href={currentProject?.website}
+							isExternal
+							className="btn__visit"
+						>
 							<Button
 								color="gray.500"
 								colorScheme="yellow"
