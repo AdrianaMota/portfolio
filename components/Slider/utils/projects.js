@@ -4,6 +4,7 @@ export const projects = [
 	{
 		slug: "cherry-travels",
 		image: "/CherryTravels.png",
+		wireframe: "/CherryTravelsW.png",
 		workType: "Dev & Design",
 		title: "Cherry Travels",
 		website: "https://cherrytravels.netlify.com/",
@@ -16,6 +17,7 @@ export const projects = [
 	{
 		slug: "leo",
 		image: "/Leo.png",
+		wireframe: "/CherryTravelsW.png",
 		workType: "Dev & Design",
 		title: "Leo",
 		website: "#",
@@ -29,6 +31,7 @@ export const projects = [
 	{
 		slug: "meds-4-vets",
 		image: "/Meds4Vets.png",
+		wireframe: "/CherryTravelsW.png",
 		workType: "Dev & Design",
 		title: "Meds4Vets",
 		website: "https://www.meds4vets.org/",

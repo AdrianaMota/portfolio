@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
 	Box,
 	Stack,
@@ -8,7 +9,16 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
-const Card = ({ isActive, workType, image, handleClick, slug }) => {
+const Card = ({ isActive, workType, image, wireframe, handleClick, slug }) => {
+	const [currentSrc, setSrc] = useState(image);
+
+	const handleHoverIn = () => {
+		setSrc(wireframe);
+	};
+	const handleHoverOut = () => {
+		setSrc(image);
+	};
+
 	return (
 		<Link href={`/projects/${slug}`}>
 			<Stack>
@@ -18,8 +28,12 @@ const Card = ({ isActive, workType, image, handleClick, slug }) => {
 							View More
 						</Text>
 						<LinkBox className={isActive ? "card__image" : ""}>
-							<LinkOverlay onClick={handleClick}>
-								<Image src={image} />
+							<LinkOverlay
+								onClick={handleClick}
+								onMouseOver={handleHoverIn}
+								onMouseOut={handleHoverOut}
+							>
+								<Image src={currentSrc} className="card__src" />
 							</LinkOverlay>
 						</LinkBox>
 					</Box>

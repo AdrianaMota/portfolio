@@ -9,7 +9,6 @@ import { projects } from "./utils/projects";
 const Carousel = () => {
 	const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
 	return (
-		// https://stackoverflow.com/questions/38394015/how-to-pass-data-from-child-component-to-its-parent-in-reactjs
 		<Box>
 			<Box width="75%" pt="10rem">
 				<Swiper
@@ -34,7 +33,6 @@ const Carousel = () => {
 					navigation
 					onSlideChange={(swiper) => setCurrentSlideIndex(swiper.realIndex)}
 				>
-					{/* Animate shared layout https://www.framer.com/docs/animate-shared-layout/ */}
 					<SwiperSlide>
 						{({ isActive }) => (
 							<Card
