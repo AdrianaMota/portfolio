@@ -9,6 +9,7 @@ export const projects = [
 		title: "Cherry Travels",
 		website: "https://cherrytravels.netlify.com/",
 		github: "https://github.com/AdrianaMota/CherryTravels",
+		dribbble: "https://github.com/AdrianaMota/CherryTravels",
 		summary:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
 		tech: ["html.png", "sass.png"],
@@ -22,6 +23,7 @@ export const projects = [
 		title: "Leo",
 		website: "#",
 		github: "https://github.com/AdrianaMota/leo",
+		dribbble: "https://github.com/AdrianaMota/CherryTravels",
 		summary:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
 		tech: ["react.png", "chakra.png"],
@@ -36,6 +38,7 @@ export const projects = [
 		title: "Meds4Vets",
 		website: "https://www.meds4vets.org/",
 		github: "https://github.com/AdrianaMota/meds4vets",
+		dribbble: "https://github.com/AdrianaMota/CherryTravels",
 		summary:
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in nunc vulputate.",
 		tech: ["webflow.png", "javascript.png"],

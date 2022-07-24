@@ -38,6 +38,9 @@ const ProjectBySlug = () => {
 						dangerouslySetInnerHTML={{ __html: currentProject?.description }}
 					></Box>
 					<HStack mt={"3rem"}>
+						<Link href={currentProject?.github} isExternal mr="1rem">
+							<Image src="/github.png" width="2.5rem" />
+						</Link>
 						<Link
 							href={currentProject?.website}
 							isExternal
@@ -52,19 +55,6 @@ const ProjectBySlug = () => {
 							>
 								Visit Website
 							</Button>
-						</Link>
-						<Link
-							href={currentProject?.github}
-							isExternal
-							ml="2rem"
-							className="btn__git"
-						>
-							<HStack p="8.8px 3rem">
-								<Text fontSize="15px" className="btn__git__text">
-									View on
-								</Text>
-								<Image src="/github.png" width="2.5rem" pl="5px" />
-							</HStack>
 						</Link>
 					</HStack>
 				</Box>
