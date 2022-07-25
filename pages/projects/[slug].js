@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
 	Box,
 	Button,
@@ -18,13 +19,23 @@ const ProjectBySlug = () => {
 		return img.slug === query.slug;
 	}
 
+	const [index, setIndex] = useState(0);
+
 	const currentProject = projects.find(isCurrent);
 	console.log(currentProject);
+
+	const images = [currentProject?.wireframe, currentProject?.image];
+	for (let i = 1; i < images.length; i++) {
+		useEffect(() => {
+			const timer = setTimeout(() => setIndex(i), i * 1000);
+			return () => clearTimeout(timer);
+		}, []);
+	}
 
 	return (
 		<div>
 			<Flex>
-				<Image src={currentProject?.image} width="65vw" />
+				<Image src={images[index]} width="65vw" />
 				<Box pl="3rem" pt="3rem">
 					<Heading as="h1" fontSize={"5rem"} mb="3rem">
 						{currentProject?.title}
@@ -37,10 +48,7 @@ const ProjectBySlug = () => {
 						}}
 						dangerouslySetInnerHTML={{ __html: currentProject?.description }}
 					></Box>
-					<HStack mt={"3rem"}>
-						<Link href={currentProject?.github} isExternal mr="1rem">
-							<Image src="/github.png" width="2.5rem" />
-						</Link>
+					<Flex alignItems={"center"} mt={"3rem"} gap="7">
 						<Link
 							href={currentProject?.website}
 							isExternal
@@ -56,7 +64,11 @@ const ProjectBySlug = () => {
 								Visit Website
 							</Button>
 						</Link>
-					</HStack>
+						<Box height={"3.5rem"} borderLeft="1px solid #525252"></Box>
+						<Link href={currentProject?.github} isExternal>
+							<Image src="/github.png" width="3.2rem" />
+						</Link>
+					</Flex>
 				</Box>
 			</Flex>
 		</div>
